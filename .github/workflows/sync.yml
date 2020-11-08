@@ -60,7 +60,7 @@ jobs:
         cd /opt/Scoop/
         git remote rm origin
         git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop.git
-        cp -rf $GITHUB_WORKSPACE /opt/Scoop/
+        cp -rf 'ls $GITHUB_WORKSPACE | grep -v .git | xargs' /opt/Scoop/
         git add .
         git commit -m "Add changes" -a
         git push --set-upstream origin master
