@@ -56,11 +56,11 @@ jobs:
            github_token: ${{ secrets.GITHUB_TOKEN }}
      - name: sync to Gitee
        run: |
-        git clone https://gitee.com/sakura_bot/Scoop.git /opt/Scoop/
-        cd /opt/Scoop/
+        git clone https://gitee.com/sakura_bot/Scoop_Bucket.git /opt/Scoop_Bucket/
+        cd /opt/Scoop_Bucket/
         git remote rm origin
-        git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop.git
-        cp -rf 'ls $GITHUB_WORKSPACE | grep -v .git | xargs' /opt/Scoop/
+        git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop_Bucket.git
+        cp -rf 'ls $GITHUB_WORKSPACE | grep -v .git | xargs' /opt/Scoop_Bucket/
         git add .
         git commit -m "Add changes" -a
         git push --set-upstream origin master
