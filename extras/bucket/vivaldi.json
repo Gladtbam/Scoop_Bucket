@@ -1,0 +1,45 @@
+{
+    "version": "3.4.2066.94",
+    "description": "An innovatively designed web browser, based on Blink, for users in Vivaldi.net community that replaced departed My Opera.",
+    "homepage": "https://vivaldi.com/",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.vivaldi.com/stable/Vivaldi.3.4.2066.94.x64.exe#/dl.7z",
+            "hash": "b8ae1df72a125b4b13d531ca6acdb0e75d2a323e0d829877b043b0ee61298863"
+        },
+        "32bit": {
+            "url": "https://downloads.vivaldi.com/stable/Vivaldi.3.4.2066.94.exe#/dl.7z",
+            "hash": "d23f300f0f733bc9c8cc9c7e4c0d1f580acbb68c10b15602b65b4ddc1f77556b"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\vivaldi.7z\" -DestinationPath \"$dir\\Application\" -ExtractDir 'Vivaldi-bin' -Removal",
+            "Remove-Item \"$dir\\Application\\update_notifier.exe\"",
+            "Set-Content \"$dir\\Application\\stp.viv\" '// Vivaldi Standalone' -Encoding ASCII"
+        ]
+    },
+    "bin": "Application\\vivaldi.exe",
+    "shortcuts": [
+        [
+            "Application\\vivaldi.exe",
+            "Vivaldi"
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://vivaldi.com/download/",
+        "regex": "Vivaldi\\.([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.exe#/dl.7z"
+            }
+        }
+    }
+}

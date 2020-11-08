@@ -1,0 +1,27 @@
+{
+    "version": "2.65",
+    "homepage": "https://www.nirsoft.net/utils/wifi_information_view.html",
+    "url": "https://www.nirsoft.net/utils/wifiinfoview.zip",
+    "bin": "WifiInfoView.exe",
+    "shortcuts": [
+        [
+            "WifiInfoView.exe",
+            "NirSoft\\WifiInfoView"
+        ]
+    ],
+    "persist": [
+        "wifiinfoview_lng.ini",
+        "wifiinfoview.cfg"
+    ],
+    "hash": "a8f99b17d283c8490b43479f941cac4b6090a65d4cd1c3b88037e22404739e51",
+    "description": "Displays extensive information about wireless networks in your area.",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to nirsoft.",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/wifiinfoview.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "url": "https://www.nirsoft.net/utils/wifiinfoview.zip"
+    }
+}

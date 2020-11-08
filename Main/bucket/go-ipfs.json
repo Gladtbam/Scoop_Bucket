@@ -1,0 +1,34 @@
+{
+    "version": "0.7.0",
+    "description": "A peer-to-peer hypermedia protocol to make the web faster, safer, and more open.",
+    "homepage": "https://ipfs.io/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ipfs/go-ipfs/releases/download/v0.7.0/go-ipfs_v0.7.0_windows-amd64.zip",
+            "hash": "sha512:2262220e0502f00d6d429cfd16d2f0c55fa73cafb100bd72589fd1f7d97b3527dc7d49d60460650796d754f2aa4b03ba07753457691ef7d1a10d10857b819045"
+        },
+        "32bit": {
+            "url": "https://github.com/ipfs/go-ipfs/releases/download/v0.7.0/go-ipfs_v0.7.0_windows-386.zip",
+            "hash": "sha512:98b6a8e1f8bc2b9b6d1c84fca528291584d051e4f6bf87cb86da7b4f2b23d5825d6e57d47163e41bd93fcb10cf41ec2782ba7de5def5c3b85ebd06278f532a6a"
+        }
+    },
+    "extract_dir": "go-ipfs",
+    "bin": "ipfs.exe",
+    "checkver": {
+        "github": "https://github.com/ipfs/go-ipfs"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ipfs/go-ipfs/releases/download/v$version/go-ipfs_v$version_windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ipfs/go-ipfs/releases/download/v$version/go-ipfs_v$version_windows-386.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha512"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": "2020.11.01.1",
+    "description": "Download videos from YouTube.com (and a few more sites) using command line.",
+    "homepage": "https://yt-dl.org/",
+    "license": "Unlicense",
+    "suggest": {
+        "FFmpeg": [
+            "ffmpeg",
+            "ffmpeg-nightly"
+        ],
+        "vcredist": "extras/vcredist2010"
+    },
+    "url": "https://yt-dl.org/downloads/2020.11.01.1/youtube-dl.exe",
+    "hash": "0f7b9dcb45bd9afcbc8585e9743ea6b23ed3091e1f9f9692a2da44d85302878d",
+    "bin": "youtube-dl.exe",
+    "checkver": {
+        "url": "https://yt-dl.org/",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://yt-dl.org/downloads/$version/youtube-dl.exe",
+        "hash": {
+            "url": "$baseurl/SHA2-256SUMS"
+        }
+    }
+}

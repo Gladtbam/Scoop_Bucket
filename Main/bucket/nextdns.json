@@ -1,0 +1,33 @@
+{
+    "version": "1.8.8",
+    "description": "DNS53 to DNS-over-HTTPS (DoH) proxy with advanced capabilities to get the most out of the NextDNS service.",
+    "homepage": "https://nextdns.io/cli",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nextdns/nextdns/releases/download/v1.8.8/nextdns_1.8.8_windows_amd64.zip",
+            "hash": "bd0bc71a614b2b101f4420af6b18af25985388f59c2a0d0bdbf16587aed1a733"
+        },
+        "32bit": {
+            "url": "https://github.com/nextdns/nextdns/releases/download/v1.8.8/nextdns_1.8.8_windows_386.zip",
+            "hash": "a6822bdb4eb8e59dd9842500d1782e73c97ced2a5c657a74ad7cd5a45a59c4a1"
+        }
+    },
+    "bin": "nextdns.exe",
+    "checkver": {
+        "github": "https://github.com/nextdns/nextdns"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nextdns/nextdns/releases/download/v$version/nextdns_$version_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/nextdns/nextdns/releases/download/v$version/nextdns_$version_windows_386.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

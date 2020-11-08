@@ -1,0 +1,22 @@
+{
+    "version": "2.5.23",
+    "description": "A Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator).",
+    "homepage": "https://github.com/lexxmark/winflexbison",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/lexxmark/winflexbison/releases/download/v2.5.23/win_flex_bison-2.5.23.zip",
+    "hash": "6aa5c8ea662da1550020a5804c28be63ffaa53486da9f6842e24c379ec422dfc",
+    "bin": [
+        [
+            "win_bison.exe",
+            "bison"
+        ],
+        [
+            "win_flex.exe",
+            "flex"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/lexxmark/winflexbison/releases/download/v$version/win_flex_bison-$version.zip"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "homepage": "http://www.mkw.me.uk/beebem/",
+    "version": "4.15",
+    "license": "GPL-2.0-only",
+    "description": "BeebEm is a BBC Micro and Master 128 emulator",
+    "url": "http://www.mkw.me.uk/beebem/BeebEm415.zip",
+    "hash": "e26e36f511f4a1467721bb67ff0c3d9a4b56a5bda33013b17bc400fb719743be",
+    "extract_dir": "beebem",
+    "shortcuts": [
+        [
+            "BeebEm.exe",
+            "BeebEm"
+        ]
+    ],
+    "checkver": "Download version ([\\d.]+)",
+    "autoupdate": {
+        "url": "http://www.mkw.me.uk/beebem/BeebEm$cleanVersion.zip"
+    }
+}

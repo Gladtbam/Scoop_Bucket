@@ -1,0 +1,33 @@
+{
+    "version": "20.6.1",
+    "description": "The stream database optimized for event sourcing",
+    "homepage": "https://eventstore.org/",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://eventstore.com/downloads/win/EventStore-OSS-Windows-2019-v20.6.1.zip",
+            "hash": "d128029fb0f22c02b51c75be9148fb50680b17986c66edf793667c25ee672bbc"
+        }
+    },
+    "extract_dir": "EventStore-OSS-Windows-2019-v20.6.1",
+    "bin": [
+        [
+            "EventStore.ClusterNode.exe",
+            "eventstore"
+        ],
+        "EventStore.ClusterNode.exe",
+        "EventStore.TestClient.exe"
+    ],
+    "checkver": {
+        "url": "https://eventstore.org/downloads",
+        "regex": "EventStore-OSS-Windows-2019-v([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://eventstore.com/downloads/win/EventStore-OSS-Windows-2019-v$version.zip"
+            }
+        },
+        "extract_dir": "EventStore-OSS-Windows-2019-v$version"
+    }
+}

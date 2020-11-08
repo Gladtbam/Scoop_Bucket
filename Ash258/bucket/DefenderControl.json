@@ -1,0 +1,24 @@
+{
+    "version": "1.6",
+    "description": "Sordum's Defender Control. Disable Windows Defender completely.",
+    "homepage": "https://www.sordum.org/9480/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.sordum.org/eula/"
+    },
+    "url": "https://www.sordum.org/files/download/defender-control/DefenderControl.zip",
+    "hash": "6b514f89ff07ed91603f6f5506dc786a0402c7de1ddbaba366da1e249a2a2ece",
+    "extract_dir": "DefenderControl",
+    "bin": "DefenderControl.exe",
+    "shortcuts": [
+        [
+            "DefenderControl.exe",
+            "Sordum\\Defender Control"
+        ]
+    ],
+    "persist": "DefenderControl.ini",
+    "checkver": "Defender Control\\s*v([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.sordum.org/files/download/defender-control/DefenderControl.zip"
+    }
+}

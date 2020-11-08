@@ -1,0 +1,42 @@
+{
+    "version": "1.32",
+    "homepage": "https://www.nirsoft.net/utils/live_tcp_udp_watch.html",
+    "bin": "LiveTcpUdpWatch.exe",
+    "shortcuts": [
+        [
+            "LiveTcpUdpWatch.exe",
+            "NirSoft\\LiveTcpUdpWatch"
+        ]
+    ],
+    "persist": [
+        "livetcpudpwatch_lng.ini",
+        "livetcpudpwatch.cfg"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/livetcpudpwatch-x64.zip",
+            "hash": "d8e46d5dbfaf81dd5b1d942eee674c9b6f8dd126d078ffeed9a7201971fd1302"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/livetcpudpwatch.zip",
+            "hash": "bd19cb473e68cf540fb282884bc753043188ae093f486f164cd588491fd17a6d"
+        }
+    },
+    "description": "Displays live information about all TCP and UDP activity on your system.",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to nirsoft.",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/livetcpudpwatch.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/livetcpudpwatch-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/livetcpudpwatch.zip"
+            }
+        }
+    }
+}

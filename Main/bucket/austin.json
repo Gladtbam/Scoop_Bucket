@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "description": "Python frame stack sampler for CPython",
+    "homepage": "https://github.com/P403n1x87/austin",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/P403n1x87/austin/releases/download/v2.0.0/austin-2.0.0-win-x86_64.zip",
+            "hash": "4b57c87e914339f791126960f61695d80eb54072dce1b5dccbfc5287ccabe945"
+        }
+    },
+    "bin": "austin.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/P403n1x87/austin/releases/download/v$version/austin-$version-win-x86_64.zip"
+            }
+        }
+    }
+}

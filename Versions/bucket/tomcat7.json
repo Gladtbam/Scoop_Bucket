@@ -1,0 +1,41 @@
+{
+    "homepage": "https://tomcat.apache.org/",
+    "version": "7.0.106",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106-windows-x64.zip",
+            "hash": "sha512:4db08a85e81317abd3136048efbca5dddaf3f9036de834a5aa013fa1562cf0e3c472e3991188e2accd5628d2ca2d8ecc125c826d6a3230f427e59221c63bdf75"
+        },
+        "32bit": {
+            "url": "https://www.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106-windows-x86.zip",
+            "hash": "sha512:8eb1c62e719077e95db819ce73ed258258ce055d8ef8e462836f3aae3fd90cdcf912e3b3b738df4648b9d82e6edd65195487ca26c147d767137ee39cc089ad46"
+        }
+    },
+    "extract_dir": "apache-tomcat-7.0.106",
+    "bin": "bin\\catalina.bat",
+    "env_set": {
+        "CATALINA_HOME": "$dir",
+        "CATALINA_BASE": "$dir"
+    },
+    "suggest": {
+        "JRE": "java/openjdk"
+    },
+    "checkver": {
+        "url": "https://www.apache.org/dist/tomcat/tomcat-7/?C=M;O=D",
+        "re": "v(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.apache.org/dist/tomcat/tomcat-7/v$version/bin/apache-tomcat-$version-windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.apache.org/dist/tomcat/tomcat-7/v$version/bin/apache-tomcat-$version-windows-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "apache-tomcat-$version"
+    }
+}

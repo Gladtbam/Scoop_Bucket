@@ -1,0 +1,28 @@
+{
+    "version": "3.2.0",
+    "description": "A shell parser, formatter and interpreter. Supports POSIX Shell, Bash and mksh.",
+    "homepage": "https://github.com/mvdan/sh",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mvdan/sh/releases/download/v3.2.0/shfmt_v3.2.0_windows_amd64.exe#/shfmt.exe",
+            "hash": "d850200fde7861512a9c7d289e093d7cba54f7d95535b02a7ff352a1904e060f"
+        },
+        "32bit": {
+            "url": "https://github.com/mvdan/sh/releases/download/v3.2.0/shfmt_v3.2.0_windows_386.exe#/shfmt.exe",
+            "hash": "4052239a46649d9113d2a555b2aa2710172bf7a61515fbfa83ed3e4297579646"
+        }
+    },
+    "bin": "shfmt.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mvdan/sh/releases/download/v$version/shfmt_v$version_windows_amd64.exe#/shfmt.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/mvdan/sh/releases/download/v$version/shfmt_v$version_windows_386.exe#/shfmt.exe"
+            }
+        }
+    }
+}

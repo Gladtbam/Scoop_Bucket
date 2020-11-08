@@ -1,0 +1,29 @@
+{
+    "homepage": "https://transfer.sh/",
+    "description": "File sharing from the command-line",
+    "version": "1.1.7",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dutchcoders/transfer.sh/releases/download/v1.1.7/transfersh-v1.1.7-win-amd64.exe",
+            "hash": "5e4af0aa31f54ab157dea8fe51dfb34160b4d400cb7def1026d586983d552c3d"
+        }
+    },
+    "installer": {
+        "script": [
+            "$exe = (Get-ChildItem \"$dir\" 'transfersh-v*-win-amd64.exe' | Select-Object -First 1).FullName",
+            "Rename-Item \"$exe\" \"$dir\\transfersh.exe\""
+        ]
+    },
+    "bin": "transfersh.exe",
+    "checkver": {
+        "github": "https://github.com/dutchcoders/transfer.sh"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dutchcoders/transfer.sh/releases/download/v$version/transfersh-v$version-win-amd64.exe"
+            }
+        }
+    }
+}

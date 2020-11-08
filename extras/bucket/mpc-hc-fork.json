@@ -1,0 +1,56 @@
+{
+    "version": "1.9.8",
+    "description": "An extremely light-weight, open source media player for Windows.",
+    "homepage": "https://github.com/clsid2/mpc-hc",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/clsid2/mpc-hc/releases/download/1.9.8/MPC-HC.1.9.8.x64.zip",
+            "hash": "2d6cfba1d632de43870df2da3d809632579821cb00657d064b71ddf0791445d1",
+            "bin": [
+                "mpc-hc64.exe",
+                [
+                    "mpc-hc64.exe",
+                    "mpc-hc"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mpc-hc64.exe",
+                    "MPC-HC x64"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/clsid2/mpc-hc/releases/download/1.9.8/MPC-HC.1.9.8.x86.zip",
+            "hash": "da77460ea5c4240e907147db8d5d2585b9ec106c89afab966cd19985360ca7ae",
+            "bin": "mpc-hc.exe",
+            "shortcuts": [
+                [
+                    "mpc-hc.exe",
+                    "MPC-HC"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "@('mpc-hc64.ini', 'mpc-hc.ini') | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType File | Out-Null }",
+        "}"
+    ],
+    "persist": [
+        "mpc-hc64.ini",
+        "mpc-hc.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/clsid2/mpc-hc/releases/download/$version/MPC-HC.$version.x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/clsid2/mpc-hc/releases/download/$version/MPC-HC.$version.x86.zip"
+            }
+        }
+    }
+}

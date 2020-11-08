@@ -1,0 +1,42 @@
+{
+    "version": "1.23",
+    "homepage": "https://www.nirsoft.net/utils/file_access_error_view.html",
+    "bin": "FileAccessErrorView.exe",
+    "shortcuts": [
+        [
+            "FileAccessErrorView.exe",
+            "NirSoft\\FileAccessErrorView"
+        ]
+    ],
+    "persist": [
+        "fileaccesserrorview_lng.ini",
+        "fileaccesserrorview.cfg"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/fileaccesserrorview-x64.zip",
+            "hash": "8df699870332d0d6d66bd06cda9e8efdb29ec3de352ddc1d35840f3e170c4017"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/fileaccesserrorview.zip",
+            "hash": "2dd21beb62fbae87b5b1cb2310813add65075e717c08b20680f21eec6027701f"
+        }
+    },
+    "description": "Displays file access error information",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to nirsoft.",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/fileaccesserrorview.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/fileaccesserrorview-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/fileaccesserrorview.zip"
+            }
+        }
+    }
+}

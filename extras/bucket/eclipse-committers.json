@@ -1,0 +1,34 @@
+{
+    "version": "2020-09",
+    "description": "Eclipse IDE for Eclipse Committers",
+    "homepage": "https://www.eclipse.org",
+    "license": "EPL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2020-09/R/eclipse-committers-2020-09-R-win32-x86_64.zip",
+            "hash": "sha512:cb8d8f6009040c69f6261a43a0cfca705e4e0e5bccd2d8e3527d89818d91e511f72abfa36b3dd3182564a70f910f2554cb3148ed0db12861bfad43360ed36223"
+        }
+    },
+    "extract_dir": "eclipse",
+    "shortcuts": [
+        [
+            "eclipse.exe",
+            "Eclipse IDE for Eclipse Committers"
+        ]
+    ],
+    "checkver": {
+        "url": "https://download.eclipse.org/technology/epp/downloads/release/release.xml",
+        "xpath": "/packages/present",
+        "regex": "([\\d-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-committers-$version-R-win32-x86_64.zip",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            }
+        }
+    }
+}

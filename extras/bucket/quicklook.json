@@ -1,0 +1,20 @@
+{
+    "version": "3.6.10",
+    "description": "Bring macOS 'Quick Look' feature to Windows",
+    "homepage": "https://pooi.moe/QuickLook/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/QL-Win/QuickLook/releases/download/3.6.10/QuickLook-3.6.10.zip",
+    "hash": "7d078438fe20ac5e4b3b8b647307c3c1652c1dd9eb5a46d205614c3f507399fc",
+    "shortcuts": [
+        [
+            "QuickLook.exe",
+            "QuickLook"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/QL-Win/QuickLook"
+    },
+    "autoupdate": {
+        "url": "https://github.com/QL-Win/QuickLook/releases/download/$version/QuickLook-$version.zip"
+    }
+}

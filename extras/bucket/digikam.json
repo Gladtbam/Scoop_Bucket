@@ -1,0 +1,48 @@
+{
+    "version": "7.1.0",
+    "description": "Professional Photo Management.",
+    "homepage": "https://www.digikam.org",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.kde.org/stable/digikam/7.1.0/digiKam-7.1.0-Win64.exe#/dl.7z",
+            "hash": "51ca55fbf608d42ea5fb81eeca9592a385755a33ab959dcfdf8d1d7151776cf3"
+        },
+        "32bit": {
+            "url": "https://download.kde.org/stable/digikam/7.1.0/digiKam-7.1.0-Win32.exe#/dl.7z",
+            "hash": "b413c1e37ed64fad48e4ea5f3cd1de5fe51c281da4e0eccff3c8a117edbc02b8"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse",
+    "bin": [
+        "digikam.exe",
+        "showfoto.exe"
+    ],
+    "shortcuts": [
+        [
+            "digikam.exe",
+            "digiKam"
+        ],
+        [
+            "showfoto.exe",
+            "Showfoto"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.digikam.org/download/",
+        "regex": "digiKam-([\\d.]+)-Win64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.kde.org/stable/digikam/$version/digiKam-$version-Win64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://download.kde.org/stable/digikam/$version/digiKam-$version-Win32.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

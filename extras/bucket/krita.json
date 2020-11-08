@@ -1,0 +1,44 @@
+{
+    "version": "4.4.1",
+    "description": "A free digital painting application.",
+    "homepage": "https://krita.org/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.kde.org/stable/krita/4.4.1/krita-x64-4.4.1-setup.exe#/dl.7z",
+            "hash": "93df0091ff3b4c2eebb75af7ff5bab9d38af57f92a157edd4fe09c1f9fa10c0d"
+        },
+        "32bit": {
+            "url": "https://download.kde.org/stable/krita/4.4.1/krita-x86-4.4.1-setup.exe#/dl.7z",
+            "hash": "cde368cd4983293e18e92826a4a7ef40cd1cc39b07e18ae545345474a48982f0"
+        }
+    },
+    "bin": [
+        "bin\\krita.exe",
+        "bin\\kritarunner.exe"
+    ],
+    "shortcuts": [
+        [
+            "bin\\krita.exe",
+            "Krita"
+        ]
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe.nsis\" -Recurse -Force",
+    "checkver": {
+        "url": "https://krita.org/en/download/krita-desktop/",
+        "regex": "Download Krita\\s+([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.kde.org/stable/krita/$version/krita-x64-$version-setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://download.kde.org/stable/krita/$version/krita-x86-$version-setup.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "version": "18.9-Leia",
+    "description": "Kodi. Multiplatform media player and entertainment hub.",
+    "homepage": "https://kodi.tv",
+    "license": {
+        "identifier": "GPL-2.0-or-later",
+        "url": "https://github.com/xbmc/xbmc/blob/master/LICENSES/README.md"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.kodi.tv/releases/windows/win64/kodi-18.9-Leia-x64.exe#/cosi.7z",
+            "hash": "1819c2bed5bf94b0491879c09e093a40eb358e8b0f5e024c54542d52a27fe78b"
+        },
+        "32bit": {
+            "url": "https://mirrors.kodi.tv/releases/windows/win32/kodi-18.9-Leia-x86.exe#/cosi.7z",
+            "hash": "4b9fc49c2211b9c26190d584808cd4f89bf7ff8f7f9f8084ce8c09d538969bc1"
+        }
+    },
+    "pre_install": "Remove-item \"$dir\\$*\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "kodi.exe",
+            "Kodi",
+            "-p"
+        ]
+    ],
+    "persist": "portable_data",
+    "checkver": {
+        "url": "https://mirrors.kodi.tv/releases/windows/win64/?C=M&O=D",
+        "regex": "kodi-([\\w.-]+)-x64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.kodi.tv/releases/windows/win64/kodi-$version-x64.exe#/cosi.7z"
+            },
+            "32bit": {
+                "url": "https://mirrors.kodi.tv/releases/windows/win32/kodi-$version-x86.exe#/cosi.7z"
+            }
+        }
+    }
+}

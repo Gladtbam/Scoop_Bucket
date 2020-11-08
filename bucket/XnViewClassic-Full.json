@@ -1,0 +1,27 @@
+{
+    "homepage": "https://www.xnview.com/en/xnview/",
+    "version": "2.49.4",
+    "license": "freeware",
+    "extract_dir": "XnView",
+    "url": "https://download.xnview.com/XnView-win-full.zip",
+    "hash": "646de249ceb6e9c1736bc34217c36e720fd7e2fa25468b271a6dec18707d4e3e",
+    "bin": "xnview.exe",
+    "shortcuts": [
+        [
+            "xnview.exe",
+            "XnView"
+        ]
+    ],
+    "persist": [
+        "xnview.ini",
+        "category.db"
+    ],
+    "checkver": "Download <strong>XnView ([\\d.]+)</strong> for Windows",
+    "autoupdate": {
+        "url": "https://download.xnview.com/XnView-win-full.zip",
+        "hash": {
+            "url": "https://www.xnview.com/en/xnview/",
+            "find": "XnView-win-full.zip: ($sha256)"
+        }
+    }
+}

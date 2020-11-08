@@ -1,0 +1,46 @@
+{
+    "files.associations": {
+        "*.wsb": "xml",
+    },
+    "json.schemas": [
+        {
+            "url": "https://raw.githubusercontent.com/Ash258/Scoop-Core/NEW/schema.json",
+            "fileMatch": [
+                ".vscode/Template.jsonc",
+                "TODO/*.json",
+                "bucket/*.json",
+            ],
+        },
+    ],
+    "markdown.extension.italic.indicator": "_",
+    "markdown.extension.orderedList.marker": "one",
+    "markdown.extension.tableFormatter.enabled": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.plaintext": false,
+    "markdown.extension.toc.unorderedList.marker": "-",
+    "markdown.extension.toc.updateOnSave": false,
+    "powershell.codeFormatting.preset": "OTBS",
+    "[yaml]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true,
+        },
+        "editor.autoIndent": "full",
+    },
+    "yaml.completion": true,
+    "yaml.format.bracketSpacing": true,
+    "yaml.format.enable": false,
+    "yaml.format.singleQuote": true,
+    "yaml.hover": true,
+    "yaml.schemas": {
+        "http://json.schemastore.org/appveyor": "appveyor.y*ml",
+        "http://json.schemastore.org/gitlab-ci": "gitlab-ci.y*ml",
+        "https://raw.githubusercontent.com/Ash258/Scoop-Core/NEW/schema.json": [
+            ".vscode/Template.yml",
+            "TODO/*.y*ml",
+            "bucket/*.y*ml",
+        ],
+    },
+    "yaml.validate": true,
+}
