@@ -9,6 +9,8 @@ on:
   schedule:
 
     - cron: 0 0 * * *
+  push:
+    paths: '.github/workflows/test.yml'
 
 jobs:
 
