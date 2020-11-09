@@ -47,6 +47,7 @@ jobs:
      - name: Commit files
        run: 
         git config --global user.email "action@github.com"
+        
         git config --global user.name "GitHub Action"
      - name: sync to Gitee
        run: |
