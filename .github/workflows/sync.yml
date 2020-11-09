@@ -62,7 +62,9 @@ jobs:
         git remote rm origin
         git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop_Bucket.git
         rm -rf `ls|egrep -v '(.git)'`
-        cp -rf `ls $GITHUB_WORKSPACE | grep -v '(.git)' | xargs` /opt/Scoop_Bucket/
+        cd $GITHUB_WORKSPACE
+        cp -rf `ls $GITHUB_WORKSPACE | egrep -v '(.git)'` /opt/Scoop_Bucket/
+        cd /opt/Scoop_Bucket/
         git add .
         git commit -m "Add changes" -a
         git push --set-upstream origin master
