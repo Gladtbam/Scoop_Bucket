@@ -110,7 +110,7 @@ jobs:
 
         rm -rf `ls|egrep -v '(.git)'`
 
-        cp -rf `ls $GITHUB_WORKSPACE | grep -v '(.git)'` /opt/Scoop_Bucket/
+        cp -rf `ls $GITHUB_WORKSPACE/* | egrep -v '(.git)'` /opt/Scoop_Bucket/
 
         git add .
 
