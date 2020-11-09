@@ -1,0 +1,69 @@
+{
+    "version": "4.56",
+    "description": "A fast, compact and innovative graphic viewer",
+    "homepage": "https://www.irfanview.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.irfanview.com/eula.htm"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://www.irfanview.info/files/iview456_x64.zip",
+                "https://www.irfanview.info/files/iview456_plugins_x64.zip"
+            ],
+            "hash": [
+                "e15f67efda1956b1f0e976c97a76494fc86e075b0824c5352dd1fb049c8c8e31",
+                "a6c431bf3b28a69b6d0296cc4d928dbdae352bdd4344ec3a31cf08f50f2aa8d7"
+            ],
+            "shortcuts": [
+                [
+                    "i_view64.exe",
+                    "IrfanView"
+                ]
+            ],
+            "bin": [
+                [
+                    "i_view64.exe",
+                    "irfanview"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://www.irfanview.info/files/iview456.zip",
+                "https://www.irfanview.info/files/iview456_plugins.zip"
+            ],
+            "hash": [
+                "b885b6779341b196fc445d8045e3a45a84eff545fbe48ebdc6656f1f9745f2ed",
+                "361988ed1baa9c7854407eb6b75f154a6379e6a31c27a7adb9b242bd5ab1cafa"
+            ],
+            "shortcuts": [
+                [
+                    "i_view32.exe",
+                    "IrfanView"
+                ]
+            ],
+            "bin": [
+                [
+                    "i_view32.exe",
+                    "irfanview"
+                ]
+            ]
+        }
+    },
+    "extract_to": [
+        "",
+        "Plugins"
+    ],
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\i_view64.ini\")) { New-Item \"$dir\\i_view64.ini\" | Out-Null }",
+        "if (-not (Test-Path \"$persist_dir\\i_view32.ini\")) { New-Item \"$dir\\i_view32.ini\" | Out-Null }"
+    ],
+    "persist": [
+        "i_view64.ini",
+        "i_view32.ini",
+        "Languages"
+    ],
+    "checkver": ">\\s*version\\s+([\\d.-]+)\\s*<"
+}

@@ -1,0 +1,39 @@
+{
+    "version": "2.12.1",
+    "description": "Git extension for versioning large files.",
+    "homepage": "https://git-lfs.github.com/",
+    "license": "MIT",
+    "suggest": {
+        "Git": [
+            "git",
+            "git-with-openssh"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.12.1/git-lfs-windows-amd64-v2.12.1.zip",
+            "hash": "1243626c8b7d3607e1335c31cc00972e34904a568dcfb48e7c0f404877cceadc"
+        },
+        "32bit": {
+            "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.12.1/git-lfs-windows-386-v2.12.1.zip",
+            "hash": "246d6ad24ae6c89d88453dac50aa6ec991b0f09b21a72b56397c4ee3d795b2fc"
+        }
+    },
+    "bin": "git-lfs.exe",
+    "checkver": {
+        "github": "https://github.com/git-lfs/git-lfs"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/git-lfs/git-lfs/releases/download/v$version/git-lfs-windows-amd64-v$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/git-lfs/git-lfs/releases/download/v$version/git-lfs-windows-386-v$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sums.asc"
+        }
+    }
+}

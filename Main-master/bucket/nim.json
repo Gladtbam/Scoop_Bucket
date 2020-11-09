@@ -1,0 +1,57 @@
+{
+    "version": "1.4.0",
+    "description": "A statically typed compiled systems programming language, which combines successful concepts from mature languages like Python, Ada and Modula.",
+    "homepage": "https://nim-lang.org/",
+    "license": "MIT",
+    "depends": "gcc",
+    "architecture": {
+        "64bit": {
+            "url": "https://nim-lang.org/download/nim-1.4.0_x64.zip",
+            "hash": "931b8718e9d9651ca75cefa2e086671bf2b0c83b313034c9246c46d3288a5b1d"
+        },
+        "32bit": {
+            "url": "https://nim-lang.org/download/nim-1.4.0_x32.zip",
+            "hash": "941a0cff5ca0cdcfce1b1fe8d60aebff1d27af6cb1ba4c0a49cb863eaaa35ed1"
+        }
+    },
+    "extract_dir": "nim-1.4.0",
+    "post_install": [
+        "# Copy Nimble package",
+        "Copy-Item -Recurse \"$dir\\dist\\nimble\\src\\nimblepkg\" \"$dir\\bin\""
+    ],
+    "bin": [
+        "bin\\nim.exe",
+        "bin\\nimble.exe",
+        "bin\\nimgrab.exe",
+        "bin\\nimgrep.exe",
+        "bin\\nimpretty.exe",
+        "bin\\nimsuggest.exe",
+        "bin\\vccexe.exe",
+        "bin\\testament.exe"
+    ],
+    "persist": "config",
+    "checkver": {
+        "url": "https://nim-lang.org/install_windows.html",
+        "regex": "nim-([\\d.]+)_x64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nim-lang.org/download/nim-$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://nim-lang.org/download/nim-$version_x32.zip"
+            }
+        },
+        "extract_dir": "nim-$version",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    },
+    "installer": {
+        "script": "add_first_in_path \"$env:USERPROFILE\\.nimble\\bin\" $global"
+    },
+    "uninstaller": {
+        "script": "remove_from_path \"$env:USERPROFILE\\.nimble\\bin\" $global"
+    }
+}

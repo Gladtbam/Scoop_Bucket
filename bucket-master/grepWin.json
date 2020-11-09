@@ -1,0 +1,39 @@
+{
+    "homepage": "https://tools.stefankueng.com/grepWin.html",
+    "description": "Regular expression search and replace tool in files.",
+    "license": "GPL-3.0-only",
+    "version": "2.0.4",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/stefankueng/grepWin/releases/download/2.0.4/grepWin-x64-2.0.4_portable.exe#/grepWin.exe",
+            "hash": "0b600bb5775d4e100b89fc5fc6f5e141a2b2d9ef0470e06ab562abcab4530ec1"
+        },
+        "32bit": {
+            "url": "https://github.com/stefankueng/grepWin/releases/download/2.0.4/grepWin-2.0.4_portable.exe#/grepWin.exe",
+            "hash": "3ca203bade6a871a3c13197ff1a91ca71bcb1726d1793056eefe3009a7c6af59"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\grepwin.ini\")) {Set-Content \"$dir\\grepwin.ini\" (@('[global]', '[Software\\grepWin\\History]') -join \"`r`n\") -Encoding ASCII}",
+    "bin": "grepWin.exe",
+    "persist": "grepwin.ini",
+    "shortcuts": [
+        [
+            "grepWin.exe",
+            "grepWin",
+            "/portable"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/stefankueng/grepWin"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/stefankueng/grepWin/releases/download/$version/grepWin-x64-$version_portable.exe#/grepWin.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/stefankueng/grepWin/releases/download/$version/grepWin-$version_portable.exe#/grepWin.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "version": "1.1.0",
+    "description": "devilutionX. Diablo I",
+    "homepage": "https://github.com/diasurgical/devilutionX",
+    "license": {
+        "identifier": "Unlicense",
+        "url": "https://github.com/diasurgical/devilutionX/blob/master/LICENSE"
+    },
+    "url": [
+        "https://github.com/diasurgical/devilutionX/releases/download/1.1.0/devilutionx-windows-i386.zip",
+        "http://cdn.pvpgn.pro/diablo1/DIABDAT.MPQ#/diabdat.mpq"
+    ],
+    "hash": [
+        "f8a2b6dad44a50a7358827729442084b22493293f499c6333c7e76a2ead915ac",
+        "703a962500b6bd80e02b9f3f31a4fe9e95fee1fbc6690cdab63f4c628e0a44f2"
+    ],
+    "extract_dir": "devilutionx-windows-i386",
+    "bin": "devilutionX.exe",
+    "shortcuts": [
+        [
+            "devilutionX.exe",
+            "Diablo I"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/diasurgical/devilutionX/releases/download/$version/devilutionx-windows-i386.zip",
+        "hash": {
+            "url": "https://github.com/diasurgical/devilutionX/releases/tag/$version"
+        }
+    }
+}

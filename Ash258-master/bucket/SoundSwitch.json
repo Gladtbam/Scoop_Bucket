@@ -1,0 +1,30 @@
+{
+    "##": "Inspect if any of PDB files need to be persisted",
+    "version": "5.5.4.33783",
+    "description": "SoundSwitch. Default playing device switcher",
+    "homepage": "https://soundswitch.aaflalo.me",
+    "license": {
+        "identifier": "GPL-2.0-or-later",
+        "url": "https://github.com/Belphemur/SoundSwitch/blob/master/LICENSE.txt"
+    },
+    "url": "https://github.com/Belphemur/SoundSwitch/releases/download/v5.5.4/SoundSwitch_v5.5.4.33783_Release_Installer.exe",
+    "hash": "c5e1488c25333726be9e0eaa8d24ed2b092d7926ea7c43f771064630564c7261",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "SoundSwitch.exe",
+            "SoundSwitch"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Belphemur/SoundSwitch",
+        "regex": "_v([\\d.]+)_Release"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Belphemur/SoundSwitch/releases/download/v$matchHead/SoundSwitch_v$version_Release_Installer.exe",
+        "hash": {
+            "url": "https://github.com/Belphemur/SoundSwitch/releases/tag/v$matchHead",
+            "regex": "(?sm)SHA-256<.*?>$sha256</"
+        }
+    }
+}

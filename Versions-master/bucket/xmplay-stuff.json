@@ -1,0 +1,43 @@
+{
+    "version": "3.8.5.3",
+    "license": "Freeware",
+    "homepage": "https://www.un4seen.com/xmplay.html",
+    "description": "The latest (potentially unstable) build of XMPlay, a Win32 audio player.",
+    "url": "https://www.un4seen.com/stuff/xmplay.exe",
+    "hash": "7fa5b6cf0206b62beb1e94a78664c1917f5f11b516df4c9a8edb2564426d4b5f",
+    "pre_install": [
+        "# Create placeholder files",
+        "function CreateFile([String[]] $file) {",
+        "    foreach ($f in $file) {",
+        "        if (! (Test-Path \"$dir\\$f\")) { New-Item \"$dir\\$f\" -ItemType 'File' | Out-Null }",
+        "    }",
+        "}",
+        "CreateFile 'xmplay.ini', 'xmplay.library', 'xmplay.pls'"
+    ],
+    "bin": [
+        [
+            "xmplay.exe",
+            "xmplay-stuff"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xmplay.exe",
+            "XMPlay (Stuff Version)"
+        ]
+    ],
+    "persist": [
+        "xmplay.ini",
+        "xmplay.library",
+        "xmplay.pls",
+        "plugins",
+        "skins"
+    ],
+    "checkver": {
+        "url": "https://www.un4seen.com/xmplay-stuff.php",
+        "regex": "([\\d.]+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://www.un4seen.com/stuff/xmplay.exe"
+    }
+}

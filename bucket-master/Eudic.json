@@ -1,0 +1,28 @@
+{
+    "homepage": "https://www.eudic.net/",
+    "version": "2020-10-18",
+    "license": "freeware",
+    "url": "http://static.frdic.com/pkg/eudic_win.zip?v=version",
+    "hash": "45db6896b193936e49c62ab0ea89aa52c7139ba8779cf2dcf40f48a977991468",
+    "installer": {
+        "script": [
+            "Expand-7ZipArchive \"$dir\\eudic_win.exe\" \"$dir\\\" -Removal",
+            "Expand-7ZipArchive \"$dir\\app.7z\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\uninst.exe.nsis\",\"$dir\\`$PLUGINSDIR\"  -Force -Recurse"
+        ]
+    },
+    "bin": "eudic.exe",
+    "shortcuts": [
+        [
+            "eudic.exe",
+            "Eudic"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.eudic.net/v4/en/app/download",
+        "regex": "<a href=\"https://www.eudic.net/download/eudic_win.zip\\?v=([\\d-]+)\""
+    },
+    "autoupdate": {
+        "url": "http://static.frdic.com/pkg/eudic_win.zip?v=version"
+    }
+}

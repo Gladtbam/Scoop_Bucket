@@ -1,0 +1,37 @@
+{
+    "version": "10.2.4-1949",
+    "description": "Note Taking App - Organize Your Notes with Evernote",
+    "homepage": "https://evernote.com/",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://evernote.com/intl/en/legal/terms-of-service"
+    },
+    "notes": "We don't persist your Evernote data, they are still storaged in \"$env:APPDATA\\Evernote\".",
+    "url": "https://cdn1.evernote.com/boron/win/builds/Evernote-10.2.4-1949-setup.exe#/dl.7z",
+    "hash": "b7bd2feee6830f80ff82d4d081b90f5043ab412ba2d2e892affb864f490a6a43",
+    "installer": {
+        "script": [
+            "if ([Environment]::Is64BitOperatingSystem) {",
+            "    Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Removal",
+            "} else {",
+            "    Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" $dir -Removal",
+            "}",
+            "Remove-Item \"$dir\\Uninstall Evernote.exe\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+            "Remove-Item \"$dir\\resources\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Evernote.exe",
+            "Evernote"
+        ]
+    ],
+    "checkver": {
+        "url": "https://evernote.com/intl/en/download",
+        "regex": "Evernote-([\\d.-]+)-setup.exe"
+    },
+    "autoupdate": {
+        "url": "https://cdn1.evernote.com/boron/win/builds/Evernote-$version-setup.exe#/dl.7z"
+    }
+}

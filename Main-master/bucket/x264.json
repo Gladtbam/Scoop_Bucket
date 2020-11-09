@@ -1,0 +1,31 @@
+{
+    "version": "3027",
+    "description": "H.264/MPEG-4 AVC video encoder",
+    "homepage": "https://www.videolan.org/developers/x264.html",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://artifacts.videolan.org/x264/release-win64/x264-r3027-4121277.exe#/x264.exe",
+            "hash": "8775a1495070f3d25bbf18e590e19d35d3bc4df74997f03ed92265475c9d600d"
+        },
+        "32bit": {
+            "url": "https://artifacts.videolan.org/x264/release-win32/x264-r3027-4121277.exe#/x264.exe",
+            "hash": "88b83ab6219cd3ef58b5f6f8988567a60ba7ce44df5a09f45ace16bbff71f483"
+        }
+    },
+    "bin": "x264.exe",
+    "checkver": {
+        "url": "https://artifacts.videolan.org/x264/release-win64/",
+        "regex": "x264-r([\\d]+)-(?<commit>[a-fA-F\\d]{7})\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://artifacts.videolan.org/x264/release-win64/x264-r$version-$matchCommit.exe#/x264.exe"
+            },
+            "32bit": {
+                "url": "https://artifacts.videolan.org/x264/release-win32/x264-r$version-$matchCommit.exe#/x264.exe"
+            }
+        }
+    }
+}

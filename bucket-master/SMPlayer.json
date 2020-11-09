@@ -1,0 +1,54 @@
+{
+    "homepage": "https://www.smplayer.info/",
+    "version": "20.6.0",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/smplayer/SMPlayer/20.6.0/smplayer-portable-20.6.0.0-x64.7z",
+            "hash": "sha1:ca4f51f9615ed49b700975748fb3555d71bd88ed"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/smplayer/SMPlayer/20.6.0/smplayer-portable-20.6.0.0.7z",
+            "hash": "sha1:64e452c88685d6b1187c3c8ddaa47acc1e23312d"
+        }
+    },
+    "extract_dir": "smplayer-portable-20.6.0.0",
+    "bin": "smplayer.exe",
+    "persist": [
+        "smplayer.ini",
+        "playlist.ini",
+        "player_info.ini",
+        "hdpi.ini",
+        "favorites.m3u8",
+        "radio.m3u8",
+        "tv.m3u8",
+        "file_settings"
+    ],
+    "shortcuts": [
+        [
+            "smplayer.exe",
+            "SMPlayer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.smplayer.info/downloads/",
+        "regex": "Click here to download SMPlayer ([\\d.]+) \\(32-bit\\)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/smplayer/SMPlayer/$version/smplayer-portable-$version.0-x64.7z",
+                "hash": {
+                    "mode": "fosshub"
+                }
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/smplayer/SMPlayer/$version/smplayer-portable-$version.0.7z",
+                "hash": {
+                    "mode": "fosshub"
+                }
+            }
+        },
+        "extract_dir": "smplayer-portable-$version.0"
+    }
+}

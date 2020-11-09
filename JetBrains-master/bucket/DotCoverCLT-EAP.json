@@ -1,0 +1,28 @@
+{
+    "version": "2020.3.EAP6",
+    "description": "dotCover Command Line Tools Early Access Program. Standalone command line package that enables analysing code coverage outside of Visual Studio.",
+    "homepage": "https://www.jetbrains.com/dotcover/download/#section=commandline",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/legal/agreements/user_eap.html"
+    },
+    "url": "https://download.jetbrains.com/resharper/dotUltimate.2020.3.EAP6/JetBrains.dotCover.CommandLineTools.2020.3.EAP6.Checked.zip",
+    "hash": "04eb1329d1666dfb2f8613230ac6f961d7217546ac3ef8075a5a0e7ae5edc761",
+    "bin": [
+        "dotCover.exe",
+        [
+            "dotCover.exe",
+            "dotCover-EAP"
+        ]
+    ],
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=DCCLT&latest=true&platform=zip&type=eap",
+        "jsonpath": "$..build"
+    },
+    "autoupdate": {
+        "url": "https://download.jetbrains.com/resharper/dotUltimate.$version/JetBrains.dotCover.CommandLineTools.$version.Checked.zip",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

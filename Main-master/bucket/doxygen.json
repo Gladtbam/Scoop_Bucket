@@ -1,0 +1,35 @@
+{
+    "homepage": "http://www.doxygen.nl/",
+    "description": "Documentation generator from annotated source code.",
+    "license": "GPL-2.0-only",
+    "version": "1.8.20",
+    "architecture": {
+        "64bit": {
+            "url": "http://doxygen.nl/files/doxygen-1.8.20.windows.x64.bin.zip",
+            "hash": "4b6000bc611caa26140194295dd671e05c66069aceb2e9261793f7fb87a3a11a"
+        },
+        "32bit": {
+            "url": "http://doxygen.nl/files/doxygen-1.8.20.windows.bin.zip",
+            "hash": "0825959df1ac3aeb75e99e9543ecc1bba5ad152fcf45844383807bdea1029215"
+        }
+    },
+    "bin": [
+        "doxygen.exe",
+        "doxyindexer.exe",
+        "doxysearch.cgi.exe"
+    ],
+    "checkver": {
+        "url": "http://www.doxygen.nl/download.html",
+        "re": "The latest version of doxygen is ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://doxygen.nl/files/doxygen-$version.windows.x64.bin.zip"
+            },
+            "32bit": {
+                "url": "http://doxygen.nl/files/doxygen-$version.windows.bin.zip"
+            }
+        }
+    }
+}

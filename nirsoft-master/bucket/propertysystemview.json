@@ -1,0 +1,42 @@
+{
+    "version": "1.15",
+    "homepage": "https://www.nirsoft.net/utils/windows_property_system_view.html",
+    "bin": "PropertySystemView.exe",
+    "shortcuts": [
+        [
+            "PropertySystemView.exe",
+            "NirSoft\\PropertySystemView"
+        ]
+    ],
+    "persist": [
+        "propertysystemview_lng.ini",
+        "propertysystemview.cfg"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/propertysystemview-x64.zip",
+            "hash": "cdfe882dc58f6b250453eae3e0e75ad31e66b8a2959ec15530166740f1089585"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/propertysystemview.zip",
+            "hash": "ecb3286c68991b27be5b19c39671b712c00bffc3927d4da40a5a37ba40ea0620"
+        }
+    },
+    "description": "View/edit file properties",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to nirsoft.",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/propertysystemview.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/propertysystemview-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/propertysystemview.zip"
+            }
+        }
+    }
+}

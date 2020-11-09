@@ -1,0 +1,28 @@
+{
+    "version": "5.3.0",
+    "description": "A pathological HTTP daemon designed to let you craft almost any conceivable HTTP response.",
+    "homepage": "https://mitmproxy.org/",
+    "license": "MIT",
+    "url": "https://snapshots.mitmproxy.org/5.3.0/pathod-5.3.0-windows.zip",
+    "hash": "f4f8b39d1a80260da7c06865f8187ef4039870f219625cb3718c93f0a1b90b4e",
+    "bin": [
+        "pathod.exe",
+        "pathoc.exe"
+    ],
+    "shortcuts": [
+        [
+            "pathod.exe",
+            "pathod"
+        ],
+        [
+            "pathoc.exe",
+            "pathoc"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mitmproxy/mitmproxy"
+    },
+    "autoupdate": {
+        "url": "https://snapshots.mitmproxy.org/$version/pathod-$version-windows.zip"
+    }
+}

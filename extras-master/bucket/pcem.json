@@ -1,0 +1,30 @@
+{
+    "version": "16",
+    "description": "An IBM PC compatibles emulator for Windows and Linux that specializes in running old os and software",
+    "homepage": "https://pcem-emulator.co.uk",
+    "license": "GPL-2.0-only",
+    "url": "https://pcem-emulator.co.uk/files/PCemV16Win.zip",
+    "hash": "77c0735c7870ac6acd54c031bb523414b6200b8ec739bf95098cb838145bb646",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\pcem.cfg\")) { New-Item \"$dir\\pcem.cfg\" | Out-Null }",
+    "bin": "PCem.exe",
+    "shortcuts": [
+        [
+            "PCem.exe",
+            "PCem"
+        ]
+    ],
+    "persist": [
+        "configs",
+        "nvr",
+        "roms",
+        "screenshots",
+        "pcem.cfg"
+    ],
+    "checkver": {
+        "url": "https://pcem-emulator.co.uk/downloads.html",
+        "regex": ">PCem\\s+v([\\d.]+)\\s+for Windows</"
+    },
+    "autoupdate": {
+        "url": "https://pcem-emulator.co.uk/files/PCemV$versionWin.zip"
+    }
+}

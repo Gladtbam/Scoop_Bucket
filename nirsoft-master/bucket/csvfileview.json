@@ -1,0 +1,42 @@
+{
+    "version": "2.47",
+    "homepage": "https://www.nirsoft.net/utils/csv_file_view.html",
+    "bin": "CSVFileView.exe",
+    "shortcuts": [
+        [
+            "CSVFileView.exe",
+            "NirSoft\\CSVFileView"
+        ]
+    ],
+    "persist": [
+        "csvfileview_lng.ini",
+        "csvfileview.cfg"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/csvfileview-x64.zip",
+            "hash": "2f2661301f0f261267f943c87558612a9cbda5de6f234e92a7340d572c277679"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/csvfileview.zip",
+            "hash": "23a1f55d3077882d7b9291ca57df53073e03e7b87d99920c8baf61986d201fa4"
+        }
+    },
+    "description": "CSV/Tab-delimited file viewer and converter",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to nirsoft.",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/csvfileview.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/csvfileview-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/csvfileview.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "version": "3.0.6",
+    "description": "Desktop application for Rocket.Chat using Electron",
+    "homepage": "https://rocket.chat",
+    "license": "MIT",
+    "url": "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/3.0.6/rocketchat-setup-3.0.6.exe#/dl.7z",
+    "hash": "sha512:156a5ccb01bb9394a9c08fb22af83b868aa983f988d1b94c7fca18e08d007b50fd37ed1b158df4fad8f6484298eebacef47e57ef077ebe94585324ed3bd8b47e",
+    "architecture": {
+        "64bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        },
+        "32bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*exe\" -Recurse",
+    "bin": [
+        [
+            "Rocket.Chat.exe",
+            "rocketchat"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Rocket.Chat.exe",
+            "Rocket Chat"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/RocketChat/Rocket.Chat.Electron"
+    },
+    "autoupdate": {
+        "url": "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/$version/rocketchat-setup-$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}
