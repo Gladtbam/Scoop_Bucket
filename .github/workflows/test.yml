@@ -1,120 +1,64 @@
 name: Test
-
 on:
-
   watch:
-
     types: [started]
-
   schedule:
-
     - cron: 0 0 * * *
   push:
     paths: '.github/workflows/test.yml'
-
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-
      - name: Checkout
-
        uses: actions/checkout@v2.3.4
-
      - name: Clone to Github
-
        run: |
-
         rm -rf `ls|egrep -v '(.git|.github|LICENSE)'`
-
         wget https://github.com/lukesampson/scoop-extras/archive/master.zip -O extras.zip
-
         wget https://github.com/ScoopInstaller/Main/archive/master.zip -O Main.zip
-
         wget https://github.com/chawyehsu/dorado/archive/master.zip -O dorado.zip
-
         wget https://github.com/Ash258/Scoop-Ash258/archive/master.zip -O Ash258.zip
-
         wget https://github.com/matthewjberger/scoop-nerd-fonts/archive/master.zip -O nerd-fonts.zip
-
         wget https://github.com/TheCjw/scoop-retools/archive/master.zip -O retools.zip
-
         wget https://github.com/Calinou/scoop-games/archive/master.zip -O games.zip
-
         wget https://github.com/TheRandomLabs/scoop-nonportable/archive/master.zip -O nonportable.zip
-
         wget https://github.com/kodybrown/scoop-nirsoft/archive/master.zip -O nirsoft.zip
-
         wget https://github.com/Ash258/Scoop-JetBrains/archive/master.zip -O JetBrains.zip
-
         wget https://github.com/TheRandomLabs/Scoop-Spotify/archive/master.zip -O spotify.zip
-
         wget https://github.com/ScoopInstaller/Versions/archive/master.zip -O Versions.zip
-
         wget https://github.com/rasa/scoops/archive/master.zip -O scoops.zip
-
         wget https://github.com/dodorz/scoop-bucket/archive/master.zip -O dodorz.zip
-
         wget https://github.com/littleli/scoop-clojure/archive/master.zip -O scoop-clojure.zip
-
         wget https://github.com/kidonng/sushi/archive/master.zip -O sushi.zip
-
         wget https://github.com/MCOfficer/scoop-nirsoft/archive/master.zip -O nirsoft-alternative.zip
-
         wget https://github.com/hermanjustnu/scoop-emulators/archive/master.zip -O emulators.zip
-
         wget https://github.com/TheRandomLabs/Scoop-Bucket/archive/master.zip -O TheRandomLabs.zip
-
         wget https://github.com/zhoujin7/tomato/archive/master.zip -O tomato.zip
-
         wget https://github.com/wangzq/scoop-bucket/archive/master.zip -O wangzq.zip
-
         wget https://github.com/AStupidBear/scoop-bear/archive/master.zip -O bear.zip
-
         wget https://github.com/jfut/scoop-pleiades/archive/master.zip -O pleiades.zip
-
         ls *.zip | xargs -n1 unzip -o -P infected
-
         rm -rf *.zip
-
         sudo apt install rename -y
-
         rename 's/Scoop-//' *
-
         rename 's/scoop-//' *
-
         rename 's/-master//' *
-
      - name: Commit files
-
-       run: |
-
+       run: 
         git config --global user.email "action@github.com"
-
         git config --global user.name "GitHub Action"
-
      - name: sync to Gitee
-
        run: |
-
         git clone https://gitee.com/sakura_bot/Scoop_Bucket.git /opt/Scoop_Bucket/
-
         cd /opt/Scoop_Bucket/
-
         git remote rm origin
-
         git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop_Bucket.git
-
-        sudo rm -rf `ls|egrep -v '(.git)'`
-
-        sudo cp -rf `ls $GITHUB_WORKSPACE | egrep -v '(.git)'` /opt/Scoop_Bucket/
-
+        rm -rf `ls|egrep -v '(.git)'`
+        cd $GITHUB_WORKSPACE
+        cp -rf `ls $GITHUB_WORKSPACE | egrep -v '(.git)'` /opt/Scoop_Bucket/
+        cd /opt/Scoop_Bucket/
         git add .
-
         git commit -m "Add changes" -a
-
         git push --set-upstream origin master
 
