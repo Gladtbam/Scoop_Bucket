@@ -108,7 +108,7 @@ jobs:
 
         git remote add origin https://sakura_bot:${{ secrets.GITEE_TOKEN }}@gitee.com/sakura_bot/Scoop_Bucket.git
 
-        cp -rf `ls $GITHUB_WORKSPACE/* | egrep -v '(.git)'` /opt/Scoop_Bucket/
+        cp -rf `ls "$GITHUB_WORKSPACE/*" | egrep -v '(.git)'` /opt/Scoop_Bucket/
 
         git add .
 
