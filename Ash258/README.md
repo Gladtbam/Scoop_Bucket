@@ -189,6 +189,7 @@
 | [qBittorrent **(qBittorrent)**](./bucket/qBittorrent.json)                                                                                                            |   ✔    |    ✔     |       ✔ (✔)       |
 | [Quick CPU **(QuickCPU)**](./bucket/QuickCPU.json)                                                                                                                    |   ✔    |    ✔     |       ✔ (⛔)       |
 | [Regshot **(Regshot)**](./bucket/Regshot.json)                                                                                                                        |   ✔    |    ❌     |       ❌ (❌)       |
+| [Remote Desktop Manager Free **(RemoteDesktopManager)**](./bucket/RemoteDesktopManager.json)                                                                          |   ✔    |    ✔     |       ✔ (⛔)       |
 | [RingCentral Glip **(Glip)**](./bucket/Glip.json)                                                                                                                     |   ✔    |    ✔     |       ✔ (⛔)       |
 | [RockstarGameLauncher **(RockstarGameLauncher)**](./bucket/RockstarGameLauncher.json)                                                                                 |   ✔    |    ♻     |       ♻ (♻)       |
 | [RPCS3 **(RPCS3)**](./bucket/RPCS3.json)                                                                                                                              |   ✔🔶   |    ✔     |       ✔ (✔)       |
@@ -223,6 +224,7 @@
 | [Sordum's Hibernate Enable Or Disable **(HibernateEnableOrDisable)**](./bucket/HibernateEnableOrDisable.json)                                                         |   ✔    |    ✔     |       ✔(⛔)        |
 | [Sordum's Hide From Uninstall List **(HideFromUninstallList)**](./bucket/HideFromUninstallList.json)                                                                  |   ✔    |    ✔     |       ✔(⛔)        |
 | [Sordum's Monitor Off **(MonitorOff)**](./bucket/MonitorOff.json)                                                                                                     |   ✔    |    ✔     |       ✔(⛔)        |
+| [Sordum's Mouse Settings Changer **(MouseSettingsChanger)**](./bucket/MouseSettingsChanger.json)                                                                      |   ✔    |    ✔     |       ✔(⛔)        |
 | [Sordum's Net Disabler **(NetDisabler)**](./bucket/NetDisabler.json)                                                                                                  |   ✔    |    ✔     |       ✔(⛔)        |
 | [Sordum's No Mouse Wheel Zoom **(NoMouseWheelZoom)**](./bucket/NoMouseWheelZoom.json)                                                                                 |   ✔    |    ✔     |       ✔(⛔)        |
 | [Sordum's NTFS Drive Protection **(NTFSDriveProtection)**](./bucket/NTFSDriveProtection.json)                                                                         |   ✔    |    ✔     |       ✔(⛔)        |

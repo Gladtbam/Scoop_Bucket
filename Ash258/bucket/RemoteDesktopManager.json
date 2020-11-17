@@ -1,0 +1,24 @@
+{
+    "version": "2020.3.18.0",
+    "description": "Devolutions Remote Desktop Manager",
+    "homepage": "https://remotedesktopmanager.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://remotedesktopmanager.com/support/faq"
+    },
+    "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManagerFree.Bin.2020.3.18.0.zip",
+    "hash": "d8f15ae84966e218a497791b424db8c7f58398d67d4cd1aec849d5155956a590",
+    "shortcuts": [
+        [
+            "RemoteDesktopManagerFree.exe",
+            "Remote Desktop Manager Free"
+        ]
+    ],
+    "checkver": {
+        "url": "https://remotedesktopmanager.com/release-notes/free",
+        "regex": ">VERSION\\s+([\\d.]+)\\s+\\("
+    },
+    "autoupdate": {
+        "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManagerFree.Bin.$version.zip"
+    }
+}
