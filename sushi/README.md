@@ -1,8 +1,12 @@
 # 🍣 Sushi
 
-A tasty and inclusive [Scoop](https://scoop-docs.now.sh/) bucket, providing various applications.
+> Are you a macOS user? Check out my [Homebrew](https://brew.sh/) tap [**Malt**](https://github.com/kidonng/homebrew-malt).
+
+A tasty and inclusive [Scoop](https://scoop-docs.now.sh/) bucket, providing various kinds of applications.
 
 Spot an error? Find a place which can be improved? Or your favorite application isn't included? Feel free to [submit an issue](https://github.com/kidonng/sushi/issues/new) or make a pull request! **Make sure to read the [contributing guide](CONTRIBUTING.md) first.**
+
+**NOTE**: Some manifests are updated automatically via GitHub Actions to reduce maintenance burden, which *may* cause installation issues.
 
 ## Usage
 
@@ -143,6 +147,7 @@ Fonts do **not** need administrator rights to **install**, but they are **needed
     "Portable version", which is different from `extras/windowsdesktop-runtime`. Copied from [`dorado/dotnet-desktop-runtime`](https://github.com/chawyehsu/dorado/blob/master/bucket/dotnet-desktop-runtime.json).
 
 -   [fontloadersub](https://github.com/yzwduck/FontLoaderSub)
+-   [gping](https://github.com/orf/gping)
 -   [lavfilters](https://github.com/Nevcairiel/LAVFilters) `#`
 
     Based on [`dorado/lavfilters`](https://github.com/chawyehsu/dorado/blob/master/experiment/lavfilters.json).
