@@ -21,7 +21,7 @@
             "    exit 1",
             "}",
             "",
-            "if (Test-Path (appdir spotify-latest)) {",
+            "if (installed spotify-latest) {",
             "    Write-Host \"spotify-latest and $app cannot both be installed at the same time.\" -Foreground Red",
             "    exit 1",
             "}",
@@ -53,7 +53,7 @@
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /deny Everyone:R | Out-Null"
         ]
     },
-    "post_install": "if (Test-Path (appdir spicetify-cli)) { init-spicetify-config-and-apply }",
+    "post_install": "if (installed spicetify-cli) { init-spicetify-config-and-apply }",
     "uninstaller": {
         "script": [
             "if (!(is_admin)) {",
@@ -66,7 +66,8 @@
             "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
             "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify.original\" -Destination \"$env:APPDATA\\Spotify\" }",
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null",
-            "Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\""
+            "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\" }",
+            "else { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\" }"
         ]
     },
     "bin": "Spotify.exe",

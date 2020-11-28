@@ -16,8 +16,8 @@
             "    exit 1",
             "}",
             "",
-            "if (Test-Path (appdir spotify-blockthespot)) {",
-            "    Write-Host \"$app and spotify-blockthespot cannot both be installed at the same time.\" -Foreground Red",
+            "if (installed spotify-with-blockthespot) {",
+            "    Write-Host \"$app and spotify-with-blockthespot cannot both be installed at the same time.\" -Foreground Red",
             "    exit 1",
             "}",
             "",
@@ -35,8 +35,8 @@
         ]
     },
     "post_install": [
-        "if (Test-Path (appdir spicetify-cli)) { init-spicetify-config-and-apply }",
-        "elseif (Test-Path (appdir blockthespot)) { blockthespot }"
+        "if (installed spicetify-cli) { init-spicetify-config-and-apply }",
+        "elseif (installed blockthespot) { blockthespot }"
     ],
     "uninstaller": {
         "script": [
@@ -45,7 +45,8 @@
             "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
             "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify.original\" -Destination \"$env:APPDATA\\Spotify\" }",
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null",
-            "Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\""
+            "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\" }",
+            "else { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\" }"
         ]
     },
     "bin": "Spotify.exe",
