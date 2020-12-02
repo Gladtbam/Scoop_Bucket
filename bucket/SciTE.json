@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://www.scintilla.org/wscite446.zip",
-            "hash": "9391419c5242816cffc962c05926767591e8c6d1a688cbacc4150de2402c4c52"
+            "hash": "c0d5f97a94b0e558dec1e78c6f88a4864b328173032c34ba5ea3bf5a92b181ae"
         },
         "32bit": {
             "url": "https://www.scintilla.org/wscite32_446.zip",
-            "hash": "fb2a830de3ba6a7867291b4f96a7f4686f5278d203cd3a90b2e5b6b91727ed86",
+            "hash": "bf9c52205c7de31434f96c830e6772ef83f1a073782a2b3ac33471627ec7a0c9",
             "pre_install": "Rename-Item \"$dir\\SciTE32.exe\" 'SciTE.exe'"
         }
     },
