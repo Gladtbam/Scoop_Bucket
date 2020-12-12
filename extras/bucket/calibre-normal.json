@@ -1,17 +1,17 @@
 {
-    "version": "5.6.0",
+    "version": "5.7.1",
     "description": "Powerful and easy to use e-book manager",
     "homepage": "https://calibre-ebook.com",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kovidgoyal/calibre/releases/download/v5.6.0/calibre-64bit-5.6.0.msi",
-            "hash": "503e408801d77887ba0b0f128c9c6d941a34bb6862bbdcc1656f7fb846e208c9",
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v5.7.1/calibre-64bit-5.7.1.msi",
+            "hash": "e2f39f14338f5810845a5e6bf69e164391c90de6d9039c6bc66f340aac0b1024",
             "extract_dir": "PFiles\\Calibre2"
         },
         "32bit": {
-            "url": "https://github.com/kovidgoyal/calibre/releases/download/v5.6.0/calibre-5.6.0.msi",
-            "hash": "ccef4bb09276c7e413311012ba073f8e61909b6351760286b07a8c167f2528a6",
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v5.7.1/calibre-5.7.1.msi",
+            "hash": "56acf2ab62e04f4235dc2ca1ecca3ca95bc06cb711f95cddfeecbff7dbc8b01f",
             "extract_dir": "PFiles\\Calibre"
         }
     },
