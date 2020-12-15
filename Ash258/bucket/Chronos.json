@@ -1,5 +1,5 @@
 {
-    "version": "4.2.0",
+    "version": "5.0.1",
     "description": "Chronos Timetracker. Desktop client for JIRA",
     "homepage": "https://chronos.web-pal.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/web-pal/chronos-timetracker/releases/download/v4.2.0/Chronos.Setup.4.2.0.exe#/cosi.7z",
-            "hash": "sha512:9fc1f1c81559485c9006ac611fcca24c629cf1f6798455b56e2f7504253ef5db114d085c2f7ab1761b9ebef0618274602334e194d5ac0053b9dc50b8a72f06c9",
+            "url": "https://github.com/web-pal/chronos-timetracker/releases/download/v5.0.1/Chronos.Setup.5.0.1.exe#/cosi.7z",
+            "hash": "sha512:eb6c407d51aac036fb7ef390c7bc1bae231e391e7e69bf0463b2fe0c3fb93d05bc179ad060fc297ddb2667b367d7a8958284c0fa350e0849c02dbf425e0233f3",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath $dir",
