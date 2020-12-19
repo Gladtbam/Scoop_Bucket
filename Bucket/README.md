@@ -4,12 +4,12 @@
 <!-- markdownlint-disable MD040 -->
 <!-- markdownlint-disable MD046 -->
 
-# Scoop Bucket
+# Scoop-Bucket [![Build status](https://ci.appveyor.com/api/projects/status/6drost3rykoiw8rh/branch/master?svg=true)](https://ci.appveyor.com/project/TheRandomLabs/scoop-bucket/branch/master)
 
 My personal [Scoop](https://github.com/lukesampson/scoop) bucket. I generally only keep manifests
 here if there is something that is likely to make them unfit for any of the known buckets.
 
-	$ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
+    $ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 
 Also check out my [Spotify/Spicetify bucket](https://github.com/TheRandomLabs/Scoop-Spotify)
 and my [Python bucket](https://github.com/TheRandomLabs/Scoop-Python)!
