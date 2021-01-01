@@ -1,12 +1,12 @@
 {
-    "version": "13.9.9",
+    "version": "14.1.5",
     "description": "Professional diagramming",
     "homepage": "https://www.draw.io",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v13.9.9/draw.io-13.9.9.exe#/dl.7z",
-            "hash": "sha512:7d439a97fe7affce9ef39560bf639fcc43716c1de21d7fb4e892d12d4ddd55b224857fb837075ad093d7009c017efb9a392405cc6cb308d6f03e985af3fc7f42",
+            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v14.1.5/draw.io-14.1.5.exe#/dl.7z",
+            "hash": "sha512:ca7ad40c43c7772bc9b45fbe832b3117d1ea5af4e07158309095b2a956361888a82a768c5f866ec3e216dd423e0f708a7d3c7c90c33463f1f53e407f8a60de74",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse"
