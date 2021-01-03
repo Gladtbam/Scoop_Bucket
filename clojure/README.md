@@ -64,13 +64,14 @@ cmd-clojure
 * [babashka](https://github.com/borkdude/babashka): A port of the clojure bash script to Clojure
 * [bb-web](https://github.com/kloimhardt/babashka-web): A babashka fork for small web-apps
 * [bootleg](https://github.com/retrogradeorbit/bootleg): Simple template processing command line tool to help build static websites
+* [carve](https://github.com/borkdude/carve): Carve will search through your code for unused vars and will remove them
 * [clj-kondo](https://github.com/borkdude/clj-kondo): A linter for Clojure code that sparks joy
 * [deps.clj](https://github.com/borkdude/deps.clj): A port of the clojure bash script to Clojure
 * [grasp](https://github.com/borkdude/grasp): (development preview) Grep Clojure code using clojure.spec regexes 
 * [jet](https://github.com/borkdude/jet): CLI to transform between JSON, EDN and Transit, powered with a minimal query language
 * [joker](https://joker-lang.org): A small interpreted dialect of Clojure written in Go. It is also a Clojure(Script) linter
 * [pgmig](https://github.com/leafclick/pgmig): Standalone PostgreSQL migration runner
-* [puget](https://github.com/borkdude/puget-cli): (development preview) A CLI version of puget
+* [puget](https://github.com/borkdude/puget-cli): A CLI version of puget
 
 ### Tools installation
 
@@ -90,13 +91,14 @@ Now pick from the following tools:
 scoop install babashka
 scoop install bb-web
 scoop install bootleg
+scoop install carve
 scoop install clj-kondo
 scoop install deps.clj
 scoop install grasp        # development preview
 scoop install jet
 scoop install joker
 scoop install pgmig
-scoop install puget        # development preview
+scoop install puget
 ```
 
 ### Updates
